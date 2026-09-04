@@ -121,6 +121,8 @@ def call_huggingface_api(dialogue: str, model: str) -> str:
     }
     
     # Create a session with retry logic
+    #testing with retries for transient errors
+    
     session = requests.Session()
     retries = Retry(
         total=3,
